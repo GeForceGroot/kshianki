@@ -15,6 +15,9 @@ export default function Home() {
       <link rel='icon' href='/favicon.ico'></link>
      </Head>
      <Navbar/>
+
+     <span className='justify-center flex font-bold text-4xl'>This is mid element</span>
+     <img src="/mid.jpg" alt="" width={2100} />
      <Footer/>
     </>
   )

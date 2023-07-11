@@ -15,7 +15,7 @@ const Footer = () => {
                                 <Link href='/'>
                                     <Image src="/websiteLogo.jpg" alt='GeFroceGrot' width={80} height={10} />
                                 </Link>
-                                <span className="font-semibold ml-3 text-3xl mt-7">𝓚𝓼𝓱𝓲𝓪𝓷𝓴𝓲</span>
+                                <span className="font-semibold ml-3 text-3xl mt-7">KSHIANKI®</span>
                             </span>
                             <p className="mt-2 text-m text-gray-500 px-6">Discover Bedding Bliss for Every Night!</p>
                         </div>
