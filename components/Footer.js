@@ -13,7 +13,7 @@ const Footer = () => {
                         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
                             <span className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
                                 <Link href='/'>
-                                    <Image src="/websiteLogo.jpg" alt='GeFroceGrot' width={80} height={10} />
+                                    <img src="/websiteLogo.jpg" alt='GeFroceGrot' width={80} height={10} />
                                 </Link>
                                 <span className="font-semibold ml-3 text-3xl mt-7">KSHIANKI®</span>
                             </span>

@@ -3,22 +3,21 @@ import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Mid from './mid'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
     <>
-     <Head>
-      <title>Kshianki: Discover Bedding Bliss for Every Night!</title>
-      <meta name='description' content='Kshianki: Discover Bedding Bliss for Every Night!'></meta>
-      <link rel='icon' href='/favicon.ico'></link>
-     </Head>
-     <Navbar/>
-
-     <span className='justify-center flex font-bold text-4xl'>This is mid element</span>
-     <img src="/mid.jpg" alt="" width={2100} />
-     <Footer/>
+      <Head>
+        <title>Kshianki: Discover Bedding Bliss for Every Night!</title>
+        <meta name='description' content='Kshianki: Discover Bedding Bliss for Every Night!'></meta>
+        <link rel='icon' href='/favicon.ico'></link>
+      </Head>
+      <Navbar />
+      <Mid/>
+      <Footer />
     </>
   )
 }
