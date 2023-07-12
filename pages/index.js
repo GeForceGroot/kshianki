@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Mid from './mid'
+import WhoWeAre from './whoWeAre'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <Mid/>
+      <WhoWeAre/>
       <Footer />
     </>
   )
