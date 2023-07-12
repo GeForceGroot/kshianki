@@ -5,8 +5,6 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 const Mid = () => {
     return (
         <>
-            {/* <img src="/mid.jpg" alt="" width={2100} /> */}
-
             <Carousel
                 showThumbs={false} // Hide thumbnail navigation
                 showStatus={false} // Hide status indicator

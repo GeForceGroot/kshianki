@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Mid from './mid'
 import WhoWeAre from './whoWeAre'
+import MixProsuct from './mixProsuct'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +20,7 @@ export default function Home() {
       <Navbar />
       <Mid/>
       <WhoWeAre/>
+      <MixProsuct/>
       <Footer />
     </>
   )
