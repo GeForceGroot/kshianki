@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import Mid from './mid'
 import WhoWeAre from './whoWeAre'
 import MixProsuct from './mixProsuct'
+import FamileyClick from './famileyClick'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export default function Home() {
       <Mid/>
       <WhoWeAre/>
       <MixProsuct/>
+      <FamileyClick/>
       <Footer />
     </>
   )
