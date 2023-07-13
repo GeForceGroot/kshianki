@@ -13,7 +13,7 @@ const FamileyClick = () => {
                             </div>
                             <h2 className="text-2xl font-medium title-font mt-5 text-red-600">Single Bedsheets</h2>
                             <p className="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-                            <a className="text-red-600 inline-flex items-center mt-3 font-bold text-lg">Explore More
+                            <a className="text-red-600 inline-flex items-center mt-3 font-bold text-lg" href='/homeFurnishing/singleBedSheets'>Explore More
                                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                 </svg>
@@ -25,7 +25,7 @@ const FamileyClick = () => {
                             </div>
                             <h2 className="text-2xl font-medium title-font text-orange-500 mt-5">Pure Cotton Bedsheet</h2>
                             <p className="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-                            <a className="text-orange-500 inline-flex items-center mt-3 font-bold text-lg">Explore More
+                            <a className="text-orange-500 inline-flex items-center mt-3 font-bold text-lg" href='/homeFurnishing/pureCottonBedSheet'>Explore More
                                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                 </svg>
@@ -37,7 +37,7 @@ const FamileyClick = () => {
                             </div>
                             <h2 className="text-2xl font-medium title-font text-yellow-400 mt-5">Kid's Bedsheets</h2>
                             <p className="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-                            <a className="text-yellow-400 inline-flex items-center mt-3 font-bold text-lg">Explore More
+                            <a className="text-yellow-400 inline-flex items-center mt-3 font-bold text-lg" href='/homeFurnishing/kidsSpecialKingSizeBedSheets'>Explore More
                                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                 </svg>
@@ -55,7 +55,7 @@ const FamileyClick = () => {
                             </div>
                             <h2 className="text-2xl font-medium title-font text-green-600 mt-5">Cushion Cover</h2>
                             <p className="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-                            <a className="text-green-700 inline-flex items-center mt-3 font-bold text-lg">Buy Diwan Set
+                            <a className="text-green-700 inline-flex items-center mt-3 font-bold text-lg" href='/cushions/cushionCover'>Explore More
                                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                 </svg>
@@ -67,7 +67,7 @@ const FamileyClick = () => {
                             </div>
                             <h2 className="text-2xl font-medium title-font text-blue-500 mt-5">Table Cover</h2>
                             <p className="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-                            <a className="text-blue-700 inline-flex items-center mt-3 font-bold text-lg">Buy Diwan Set
+                            <a className="text-blue-700 inline-flex items-center mt-3 font-bold text-lg" href='/table/tableCover'>Explore More
                                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                 </svg>
@@ -79,7 +79,7 @@ const FamileyClick = () => {
                             </div>
                             <h2 className="text-2xl font-medium title-font text-purple-600 mt-5">Diwan Set</h2>
                             <p className="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
-                            <a className="text-purple-600 inline-flex items-center mt-3 font-bold text-lg">Buy Diwan Set
+                            <a className="text-purple-600 inline-flex items-center mt-3 font-bold text-lg" href='/diwanSet'>Explore More
                                 <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-2" viewBox="0 0 24 24">
                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                 </svg>

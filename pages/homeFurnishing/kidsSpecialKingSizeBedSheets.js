@@ -4,7 +4,7 @@ const KidsSpecialKingSizeBedSheets = () => {
     return (
         <>
         <div>
-        This Page for Singel Bed Sheets.  
+        This Page for Kids Bed Sheets.  
         </div>
         </>
       )
