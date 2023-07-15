@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +34,7 @@ const Navbar = () => {
 
     return (
         <>
-            <header className="text-gray-600 body-font">
+            <header className="text-gray-600 body-font shadow-lg mb-1">
                 <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                     <span className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                         <Link href='/'>
@@ -42,7 +43,7 @@ const Navbar = () => {
                         <span className="ml-3 mt-4 text-2xl">KSHIANKI®</span>
                     </span>
                     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-                        <a className="mr-5 hover:text-black-700 text-xl font-semibold">Home</a>
+                        <a className="mr-5 hover:text-black-700 text-xl font-semibold" href='/'>Home</a>
                         <a>
                             <div className="relative inline-block text-left">
                                 <button
@@ -90,55 +91,55 @@ const Navbar = () => {
                                             {isNestedOpen && (
                                                 <div className="pl-6">
                                                     <a
-                                                        href="#"
+                                                        href="/homeFurnishing/singleBedSheets"
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                     >
                                                         Single Bedsheet
                                                     </a>
                                                     <a
-                                                        href="#"
+                                                        href="/homeFurnishing/doubleBedSheet"
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                     >
                                                         Double Bedsheet
                                                     </a>
                                                     <a
-                                                        href="#"
+                                                        href="/homeFurnishing/pureCottonBedSheet"
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                     >
                                                         Pure Cotton Bedsheet
                                                     </a>
                                                     <a
-                                                        href="#"
+                                                        href="/homeFurnishing/kidsSpecialKingSizeBedSheets"
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                     >
                                                         Kid's Special King Size Bedsheet
                                                     </a>
                                                     <a
-                                                        href="#"
+                                                        href="/homeFurnishing/"
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                     >
                                                         King Size Elastic/Fitted Bedsheet
                                                     </a>
                                                     <a
-                                                        href="#"
+                                                        href="/homeFurnishing/kingSizeElaticFittedBedSheet"
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                     >
                                                         Super King Size Bedsheet
                                                     </a>
                                                     <a
-                                                        href="#"
+                                                        href="/homeFurnishing/superKingSizeBedSheets"
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                     >
                                                         Book Folding Bedsheet Set
                                                     </a>
                                                     <a
-                                                        href="#"
+                                                        href="/homeFurnishing/bedCover"
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                     >
                                                         Bed Covers
                                                     </a>
                                                     <a
-                                                        href="#"
+                                                        href="/homeFurnishing/winterBedSheets"
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                     >
                                                         Winter Bedsheets
@@ -170,19 +171,19 @@ const Navbar = () => {
                                             {isNestedOpen1 && (
                                                 <div className="pl-6">
                                                     <a
-                                                        href="#"
+                                                        href="/cushions/cushionFillers"
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                     >
                                                         Cushion Fillers
                                                     </a>
                                                     <a
-                                                        href="#"
+                                                        href="/cushions/cushionCover"
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                     >
                                                         Cushion Cover
                                                     </a>
                                                     <a
-                                                        href="#"
+                                                        href="/cushions/cushionCoversWithFillers"
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                     >
                                                         Cushion Covers With Fillers
@@ -214,19 +215,19 @@ const Navbar = () => {
                                             {isNestedOpen2 && (
                                                 <div className="pl-6">
                                                     <a
-                                                        href="#"
+                                                        href="/table/tableRunner"
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                     >
                                                         Table Runner
                                                     </a>
                                                     <a
-                                                        href="#"
+                                                        href="/table/tableCover"
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                     >
                                                         Table Cover
                                                     </a>
                                                     <a
-                                                        href="#"
+                                                        href="/table/tableMats"
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                     >
                                                         Table Mats
@@ -290,7 +291,7 @@ const Navbar = () => {
                         <a className="mr-5 hover:text-black-700 font-semibold text-xl">Bath Towels</a>
                         <a className="mr-5 hover:text-black-700 font-semibold text-xl">Kurtis</a>
                     </nav>
-                    <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+                    <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-3xl mt-4 md:mt-0 "><AiOutlineShoppingCart />
                         <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>
