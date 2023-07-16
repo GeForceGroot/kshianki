@@ -245,7 +245,7 @@ const Navbar = () => {
                                         </div>
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
-                                                href={'/comforter'}
+                                                href={'/carpet'}
                                                 className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                             >
                                                 Carpet
@@ -253,7 +253,7 @@ const Navbar = () => {
                                         </div>
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
-                                                href={'/comforter'}
+                                                href={'/diwanSet'}
                                                 className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                             >
                                                 Diwan Set
@@ -261,7 +261,7 @@ const Navbar = () => {
                                         </div>
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
-                                                href={'/comforter'}
+                                                href={'/rugs'}
                                                 className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                             >
                                                 Rugs
@@ -269,7 +269,7 @@ const Navbar = () => {
                                         </div>
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
-                                                href={'/comforter'}
+                                                href={'/blankets'}
                                                 className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                             >
                                                 Blankets
@@ -277,7 +277,7 @@ const Navbar = () => {
                                         </div>
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
-                                                href={'/comforter'}
+                                                href={'/quilt'}
                                                 className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                             >
                                                 Quilt
@@ -288,8 +288,8 @@ const Navbar = () => {
 
                             </div>
                         </a>
-                        <a className="mr-5 hover:text-black-700 font-semibold text-xl">Bath Towels</a>
-                        <a className="mr-5 hover:text-black-700 font-semibold text-xl">Kurtis</a>
+                        <a className="mr-5 hover:text-black-700 font-semibold text-xl" href='bathTowels'>Bath Towels</a>
+                        <a className="mr-5 hover:text-black-700 font-semibold text-xl" href='/womenWear/kurti'>Kurtis</a>
                     </nav>
                     <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-3xl mt-4 md:mt-0 "><AiOutlineShoppingCart />
                         <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
