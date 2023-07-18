@@ -2,7 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { AiOutlineShoppingCart } from 'react-icons/ai'
+import { AiOutlineShoppingCart, AiFillMinusCircle, AiFillPlusCircle, AiFillCloseCircle } from 'react-icons/ai'
+import { useRef } from 'react'
+import { BsBagHeartFill } from 'react-icons/bs'
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +34,21 @@ const Navbar = () => {
         setIsNestedOpen2(!isNestedOpen2);
     };
 
+    const ref = useRef();
+
+
+    const toggleCart = () => {
+        // setSidebar(!sidebar)
+        if (ref.current.classList.contains('translate-x-full')) {
+            ref.current.classList.remove('translate-x-full')
+            ref.current.classList.add('translate-x-0')
+        }
+        else if (!ref.current.classList.contains('translate-x-full')) {
+            ref.current.classList.remove('translate-x-0')
+            ref.current.classList.add('translate-x-full')
+        }
+    }
+
     return (
         <>
             <header className="text-gray-600 body-font shadow-lg mb-1">
@@ -53,7 +70,8 @@ const Navbar = () => {
                                 >
                                     <span className='font-medium text-xl'>Home Furnishing</span>
                                     <svg
-                                        className={`-mr-1 ml-2 h-5 w-5 ${isOpen ? 'transform rotate-180' : ''}`}
+                                        className={`-mr-1 ml-2 h-4 w-4 ${isNestedOpen ? 'transform rotate-180' : ''
+                                            }`}
                                         fill="currentColor"
                                         viewBox="0 0 20 20"
                                     >
@@ -291,11 +309,25 @@ const Navbar = () => {
                         <a className="mr-5 hover:text-black-700 font-semibold text-xl" href='bathTowels'>Bath Towels</a>
                         <a className="mr-5 hover:text-black-700 font-semibold text-xl" href='/womenWear/kurti'>Kurtis</a>
                     </nav>
-                    <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-3xl mt-4 md:mt-0 "><AiOutlineShoppingCart />
+                    <button onClick={toggleCart} className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-3xl mt-4 md:mt-0 "><AiOutlineShoppingCart />
                         <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>
                     </button>
+                    <div ref={ref} className="w-90 h-full px-12 sideCart absolute right-0 top-0 bg-pink-200 p-20 transform transition-transform translate-x-full">
+                        <h2 className='font-bold text-xl text-center'>Shopping Cart</h2>
+                        <span onClick={toggleCart} className='absolute top-5 right-3 cursor-pointer text-2xl text-pink-500'><AiFillCloseCircle /></span>
+                        <ol className='list-decimal font-semibold'>
+                            <li>
+                                <div className="item flex my-5">
+                                    <div className='w-2/3 font-semibold text-lg'>Bedsheet - Upgrade your home</div>
+                                    <div className='w-1/3 font-semibold flex items-center justify-center text-xl'><AiFillMinusCircle className='mx-2 text-2xl cursor-pointer text-pink-500' /> 1 <AiFillPlusCircle className='mx-2 text-2xl cursor-pointer text-pink-500' /></div>
+                                </div>
+                            </li>
+                        </ol>
+                        <button className=" disabled:bg-pink-500 flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg"><BsBagHeartFill className='m-1' />Checkout</button>
+                    </div>
+
                 </div>
             </header>
         </>
