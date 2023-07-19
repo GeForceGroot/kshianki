@@ -4,9 +4,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { AiOutlineShoppingCart, AiFillMinusCircle, AiFillPlusCircle, AiFillCloseCircle } from 'react-icons/ai'
 import { useRef } from 'react'
-import { BsBagHeartFill } from 'react-icons/bs'
+import { BsBagHeartFill, BsFillCartXFill } from 'react-icons/bs'
 
-const Navbar = () => {
+const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
+
+    // console.log(cart, addToCart, removeFromCart, clearCart, subTotal)
+
     const [isOpen, setIsOpen] = useState(false);
     const [isOpen1, setIsOpen1] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
@@ -61,7 +64,7 @@ const Navbar = () => {
                     </span>
                     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
                         <a className="mr-5 hover:text-black-700 text-xl font-semibold" href='/'>Home</a>
-                        <a>
+                        <div>
                             <div className="relative inline-block text-left">
                                 <button
                                     type="button"
@@ -87,7 +90,6 @@ const Navbar = () => {
                                     <div className="absolute left-0 mt-4  w-40 rounded-md shadow-lg ">
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
-                                                href="#"
                                                 className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                 onClick={toggleNestedDropdown}
                                             >
@@ -167,7 +169,6 @@ const Navbar = () => {
                                         </div>
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
-                                                href="#"
                                                 className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                 onClick={toggleNestedDropdown1}
                                             >
@@ -211,7 +212,6 @@ const Navbar = () => {
                                         </div>
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
-                                                href="#"
                                                 className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
                                                 onClick={toggleNestedDropdown2}
                                             >
@@ -305,8 +305,8 @@ const Navbar = () => {
                                 )}
 
                             </div>
-                        </a>
-                        <a className="mr-5 hover:text-black-700 font-semibold text-xl" href='bathTowels'>Bath Towels</a>
+                        </div>
+                        <a className="mr-5 hover:text-black-700 font-semibold text-xl" href='/bathTowels'>Bath Towels</a>
                         <a className="mr-5 hover:text-black-700 font-semibold text-xl" href='/womenWear/kurti'>Kurtis</a>
                     </nav>
                     <button onClick={toggleCart} className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-3xl mt-4 md:mt-0 "><AiOutlineShoppingCart />
@@ -318,16 +318,23 @@ const Navbar = () => {
                         <h2 className='font-bold text-xl text-center'>Shopping Cart</h2>
                         <span onClick={toggleCart} className='absolute top-5 right-3 cursor-pointer text-2xl text-pink-500'><AiFillCloseCircle /></span>
                         <ol className='list-decimal font-semibold'>
-                            <li>
-                                <div className="item flex my-5">
-                                    <div className='w-2/3 font-semibold text-lg'>Bedsheet - Upgrade your home</div>
-                                    <div className='w-1/3 font-semibold flex items-center justify-center text-xl'><AiFillMinusCircle className='mx-2 text-2xl cursor-pointer text-pink-500' /> 1 <AiFillPlusCircle className='mx-2 text-2xl cursor-pointer text-pink-500' /></div>
-                                </div>
-                            </li>
-                        </ol>
-                        <button className=" disabled:bg-pink-500 flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg"><BsBagHeartFill className='m-1' />Checkout</button>
-                    </div>
 
+                            {Object.keys(cart).length == 0 && 
+                            <div className='my-4  font-semiboldbold'>Your Cart Is Empty!</div> }
+                            {Object.keys(cart).map((k) => {
+                                return <li key={k}>
+                                    <div className="item flex my-5">
+                                        <div className='w-2/3 font-semibold text-lg'>{cart[k].name}</div>
+                                        <div className='w-1/3 font-semibold flex items-center justify-center text-xl'><AiFillMinusCircle className='mx-2 text-2xl cursor-pointer text-pink-500' onClick={()=>{removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].variant)}} /> {cart[k].qty} <AiFillPlusCircle onClick={() => { addToCart(k, 1, cart[k].price, cart[k].name, cart[k].variant) }} className='mx-2 text-2xl cursor-pointer text-pink-500'/></div>
+                                    </div>
+                                </li>
+                            })}
+                        </ol>
+                        <div className="flex">
+                            <button className=" disabled:bg-pink-500 mr-3 flex text-white bg-pink-500 border-0 py-2 px-5 focus:outline-none hover:bg-pink-600 rounded text-lg"><BsBagHeartFill className='m-1 text-xl' />Checkout</button>
+                            <button onClick={clearCart} className=" disabled:bg-pink-500 mr-3 flex text-white bg-pink-500 border-0 py-2 px-5 focus:outline-none hover:bg-pink-600 rounded text-lg"><BsFillCartXFill className='m-1 text-xl' />Clear Cart</button>
+                        </div>
+                    </div>
                 </div>
             </header>
         </>
