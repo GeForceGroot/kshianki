@@ -54,7 +54,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
 
     return (
         <>
-            <header className="text-gray-600 body-font shadow-lg mb-1">
+            <header className="text-gray-600 body-font shadow-lg mb-1 sticky top-0 bg-white z-10">
                 <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                     <span className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                         <Link href='/'>
@@ -314,24 +314,27 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
                         </svg>
                     </button>
-                    <div ref={ref} className="w-90 h-full px-12 sideCart absolute right-0 top-0 bg-pink-200 p-20 transform transition-transform translate-x-full">
+                    <div ref={ref} className={`w-90 h-[100vh] px-12 sideCart absolute right-0 top-0 bg-pink-200 p-20 transform transition-transform ${Object.keys(cart).length !== 0 ? 'translate-x-0':'translate-x-full'}`}>
                         <h2 className='font-bold text-xl text-center'>Shopping Cart</h2>
                         <span onClick={toggleCart} className='absolute top-5 right-3 cursor-pointer text-2xl text-pink-500'><AiFillCloseCircle /></span>
                         <ol className='list-decimal font-semibold'>
 
-                            {Object.keys(cart).length == 0 && 
-                            <div className='my-4  font-semiboldbold'>Your Cart Is Empty!</div> }
+                            {Object.keys(cart).length == 0 &&
+                                <div className='my-4  font-semiboldbold'>Your Cart Is Empty!</div>}
                             {Object.keys(cart).map((k) => {
                                 return <li key={k}>
                                     <div className="item flex my-5">
                                         <div className='w-2/3 font-semibold text-lg'>{cart[k].name}</div>
-                                        <div className='w-1/3 font-semibold flex items-center justify-center text-xl'><AiFillMinusCircle className='mx-2 text-2xl cursor-pointer text-pink-500' onClick={()=>{removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].variant)}} /> {cart[k].qty} <AiFillPlusCircle onClick={() => { addToCart(k, 1, cart[k].price, cart[k].name, cart[k].variant) }} className='mx-2 text-2xl cursor-pointer text-pink-500'/></div>
+                                        <div className='w-1/3 font-semibold flex items-center justify-center text-xl'><AiFillMinusCircle className='mx-2 text-2xl cursor-pointer text-pink-500' onClick={() => { removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].variant) }} /> {cart[k].qty} <AiFillPlusCircle onClick={() => { addToCart(k, 1, cart[k].price, cart[k].name, cart[k].variant) }} className='mx-2 text-2xl cursor-pointer text-pink-500' /></div>
                                     </div>
                                 </li>
                             })}
                         </ol>
+                        <div className='font-bold my-2'>Subtotal: ₹{subTotal}</div>
                         <div className="flex">
-                            <button className=" disabled:bg-pink-500 mr-3 flex text-white bg-pink-500 border-0 py-2 px-5 focus:outline-none hover:bg-pink-600 rounded text-lg"><BsBagHeartFill className='m-1 text-xl' />Checkout</button>
+                            <Link href={'/checkout'}>
+                                <button className=" disabled:bg-pink-500 mr-3 flex text-white bg-pink-500 border-0 py-2 px-5 focus:outline-none hover:bg-pink-600 rounded text-lg"><BsBagHeartFill className='m-1 text-xl' />Checkout</button>
+                            </Link>
                             <button onClick={clearCart} className=" disabled:bg-pink-500 mr-3 flex text-white bg-pink-500 border-0 py-2 px-5 focus:outline-none hover:bg-pink-600 rounded text-lg"><BsFillCartXFill className='m-1 text-xl' />Clear Cart</button>
                         </div>
                     </div>
