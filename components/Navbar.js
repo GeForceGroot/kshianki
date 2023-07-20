@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { MdAccountCircle } from 'react-icons/md'
 import { AiOutlineShoppingCart, AiFillMinusCircle, AiFillPlusCircle, AiFillCloseCircle } from 'react-icons/ai'
 import { useRef } from 'react'
 import { BsBagHeartFill, BsFillCartXFill } from 'react-icons/bs'
@@ -309,10 +310,12 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                         <a className="mr-5 hover:text-black-700 font-semibold text-xl" href='/bathTowels'>Bath Towels</a>
                         <a className="mr-5 hover:text-black-700 font-semibold text-xl" href='/womenWear/kurti'>Kurtis</a>
                     </nav>
-                    <button onClick={toggleCart} className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-3xl mt-4 md:mt-0 "><AiOutlineShoppingCart />
-                        <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <button onClick={toggleCart} className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-3xl mt-4 md:mt-0 ">< MdAccountCircle/>
+                    </button>
+                    <button onClick={toggleCart} className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-3xl mt-4 md:mt-0 mx-5 "><AiOutlineShoppingCart />
+                        {/* <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg>
+                        </svg> */}
                     </button>
                     <div ref={ref} className={`w-90 h-[100vh] px-12 sideCart absolute right-0 top-0 bg-pink-200 p-20 transform transition-transform ${Object.keys(cart).length !== 0 ? 'translate-x-0':'translate-x-full'}`}>
                         <h2 className='font-bold text-xl text-center'>Shopping Cart</h2>

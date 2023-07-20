@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-const Login = () => {
+const forgot = () => {
     return (
         <>
             <div className="flex min-h-full items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
@@ -18,37 +18,20 @@ const Login = () => {
                     /> */}
                     <div>
                         <img className="mx-auto h-12 w-auto" src="/loginLogo.jpg" alt="KSHIANKI®" />
-                        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Sign in to your account</h2>
+                        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Forgot Password</h2>
                         <p className="mt-2 text-center text-sm text-gray-600">
                             Or
-                            <Link href={'/signup'}>
-                                <span className="font-medium text-pink-600 hover:text-pink-500"> Singup</span>
+                            <Link href={'/login'}>
+                                <span className="font-medium text-pink-600 hover:text-pink-500"> Login</span>
                             </Link>
                         </p>
                     </div>
-                    <form  className="mt-8 space-y-6" method="POST">
+                    <form className="mt-8 space-y-6" method="POST">
                         <input type="hidden" name="remember" value="true" />
                         <div className="rounded-md shadow-sm -space-y-px">
-                            <div className="mb-4 ">
+                            <div className="">
                                 <label htmlFor="email" className="sr-only">Email Address</label>
-                                <input  id="email" name="email" type="email" autoComplete="email" required className="relative block w-full rounded-t-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6" placeholder="Email" />
-                            </div>
-                            <div className="mb-4">
-                                <label htmlFor="password" className="sr-only">Password</label>
-                                <input  id="password" name="password" type="password" autoComplete="current-password" required className="relative block w-full rounded-b-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6" placeholder="Password" />
-                            </div>
-                        </div>
-
-                        <div className="flex items-center justify-between">
-                            <div className="flex items-center">
-                                <input id="remember-me" name="remember-me" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-pink-600 focus:ring-pink-600" />
-                                <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">Remember me</label>
-                            </div>
-
-                            <div className="text-sm">
-                                <Link href={'/forgot'}>
-                                    <span className="font-medium text-pink-600 hover:text-pink-500">Forgot your password?</span>
-                                </Link>
+                                <input id="email" name="email" type="email" autoComplete="email" required className="relative block w-full rounded-t-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6" placeholder="Email" />
                             </div>
                         </div>
 
@@ -59,7 +42,7 @@ const Login = () => {
                                         <path fillRule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clipRule="evenodd" />
                                     </svg>
                                 </span>
-                                Sign In
+                                Continue
                             </button>
                         </div>
                     </form>
@@ -69,4 +52,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default forgot
