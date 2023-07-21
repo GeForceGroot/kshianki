@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import Product from '@/models/Product'
-import connectDb from '@/middleware/mongoose'
 import mongoose from "mongoose";
+import connectDb from '@/middleware/mongoose'
 
 const SingleBedSheets = ({ products }) => {
 

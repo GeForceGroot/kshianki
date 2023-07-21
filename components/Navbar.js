@@ -91,7 +91,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                                     <div className="absolute left-0 mt-4  w-40 rounded-md shadow-lg ">
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
-                                                className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                className="cursor-pointer block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                 onClick={toggleNestedDropdown}
                                             >
                                                 Bed Sheets
@@ -113,55 +113,55 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                                                 <div className="pl-6">
                                                     <a
                                                         href="/homeFurnishing/singleBedSheets"
-                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Single Bedsheet
                                                     </a>
                                                     <a
                                                         href="/homeFurnishing/doubleBedSheet"
-                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Double Bedsheet
                                                     </a>
                                                     <a
                                                         href="/homeFurnishing/pureCottonBedSheet"
-                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Pure Cotton Bedsheet
                                                     </a>
                                                     <a
                                                         href="/homeFurnishing/kidsSpecialKingSizeBedSheets"
-                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Kid's Special King Size Bedsheet
                                                     </a>
                                                     <a
-                                                        href="/homeFurnishing/"
-                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                        href="/homeFurnishing/kingSizeElaticFittedBedSheet"
+                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         King Size Elastic/Fitted Bedsheet
                                                     </a>
                                                     <a
-                                                        href="/homeFurnishing/kingSizeElaticFittedBedSheet"
-                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                        href="/homeFurnishing/superKingSizeBedSheets"
+                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Super King Size Bedsheet
                                                     </a>
                                                     <a
-                                                        href="/homeFurnishing/superKingSizeBedSheets"
-                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                        href="/homeFurnishing/bookFoldingBedSheetSet"
+                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Book Folding Bedsheet Set
                                                     </a>
                                                     <a
                                                         href="/homeFurnishing/bedCover"
-                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Bed Covers
                                                     </a>
                                                     <a
                                                         href="/homeFurnishing/winterBedSheets"
-                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Winter Bedsheets
                                                     </a>
@@ -170,7 +170,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                                         </div>
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
-                                                className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                className="cursor-pointer block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                 onClick={toggleNestedDropdown1}
                                             >
                                                 Cushion
@@ -192,19 +192,19 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                                                 <div className="pl-6">
                                                     <a
                                                         href="/cushions/cushionFillers"
-                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Cushion Fillers
                                                     </a>
                                                     <a
                                                         href="/cushions/cushionCover"
-                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Cushion Cover
                                                     </a>
                                                     <a
                                                         href="/cushions/cushionCoversWithFillers"
-                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Cushion Covers With Fillers
                                                     </a>
@@ -213,7 +213,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                                         </div>
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
-                                                className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                className="cursor-pointer block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                 onClick={toggleNestedDropdown2}
                                             >
                                                 Table
@@ -235,19 +235,19 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                                                 <div className="pl-6">
                                                     <a
                                                         href="/table/tableRunner"
-                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Table Runner
                                                     </a>
                                                     <a
                                                         href="/table/tableCover"
-                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Table Cover
                                                     </a>
                                                     <a
                                                         href="/table/tableMats"
-                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                        className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Table Mats
                                                     </a>
@@ -257,7 +257,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
                                                 href={'/comforter'}
-                                                className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                             >
                                                 Comforter
                                             </a>
@@ -265,7 +265,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
                                                 href={'/carpet'}
-                                                className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                             >
                                                 Carpet
                                             </a>
@@ -273,7 +273,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
                                                 href={'/diwanSet'}
-                                                className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                             >
                                                 Diwan Set
                                             </a>
@@ -281,7 +281,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
                                                 href={'/rugs'}
-                                                className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                             >
                                                 Rugs
                                             </a>
@@ -289,7 +289,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
                                                 href={'/blankets'}
-                                                className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                             >
                                                 Blankets
                                             </a>
@@ -297,7 +297,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                                         <div className="py-1 rounded-md bg-white shadow-xs">
                                             <a
                                                 href={'/quilt'}
-                                                className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-blue-500 hover:text-white focus:outline-none focus:bg-blue-500 focus:text-white"
+                                                className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                             >
                                                 Quilt
                                             </a>
