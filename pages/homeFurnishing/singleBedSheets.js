@@ -22,8 +22,8 @@ const SingleBedSheets = ({ products }) => {
                   <div className='mt-1 flex'>
                     <div className='text-md'>Available Colors :</div>
                     {products[item].color.includes('green') && <button className="border-2 border-gray-300 ml-4 bg-green-600 rounded-full w-6 h-6 focus:outline-none"></button>}
-                    {products[item].color.includes('blue') && <button className="border-2 border-gray-300 ml-1 bg-blue-500 rounded-full w-6 h-6 focus:outline-none"></button>}
-                    {products[item].color.includes('pink') && <button className="border-2 border-gray-300 ml-1 bg-pink-500 rounded-full w-6 h-6 focus:outline-none"></button>}
+                    {products[item].color.includes('blue') && <button className="border-2 border-gray-300 ml-1 bg-blue-600 rounded-full w-6 h-6 focus:outline-none"></button>}
+                    {products[item].color.includes('pink') && <button className="border-2 border-gray-300 ml-1 bg-pink-600 rounded-full w-6 h-6 focus:outline-none"></button>}
                     {products[item].color.includes('red') && <button className="border-2 border-gray-300 ml-1 bg-red-600 rounded-full w-6 h-6 focus:outline-none"></button>}
                   </div>
                   <p className="mt-1">₹{products[item].price}</p>
@@ -71,6 +71,7 @@ export async function getServerSideProps(context) {
   return {
 
     // Will be passed to the page component as props
+    
     props: { products: JSON.parse(JSON.stringify(singleBedSheets)) },
 
   }
