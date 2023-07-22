@@ -9,8 +9,6 @@ import { BsBagHeartFill, BsFillCartXFill } from 'react-icons/bs'
 
 const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
 
-    // console.log(cart, addToCart, removeFromCart, clearCart, subTotal)
-
     const [isOpen, setIsOpen] = useState(false);
     const [isOpen1, setIsOpen1] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
@@ -64,7 +62,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                         <span className="ml-3 mt-4 text-2xl">KSHIANKI®</span>
                     </span>
                     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-                        <a className="mr-5 hover:text-black-700 text-xl font-semibold" href='/'>Home</a>
+                        <a className="mr-5 hover:text-pink-600 text-xl font-semibold" href='/'>Home</a>
                         <div>
                             <div className="relative inline-block text-left">
                                 <button
@@ -72,9 +70,9 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                                     className="inline-flex justify-center items-center space-x-1 px-4 py-2 text-m leading-5 font-medium rounded-md text-black-700 transition ease-in-out duration-150"
                                     onClick={toggleDropdown}
                                 >
-                                    <span className='font-medium text-xl'>Home Furnishing</span>
+                                    <span className='font-medium text-xl hover:text-pink-600'>Home Furnishing</span>
                                     <svg
-                                        className={`-mr-1 ml-2 h-4 w-4 ${isNestedOpen ? 'transform rotate-180' : ''
+                                        className={`-mr-1 ml-2 h-4 w-4 hover:text-pink-600 ${isNestedOpen ? 'transform rotate-180' : ''
                                             }`}
                                         fill="currentColor"
                                         viewBox="0 0 20 20"
@@ -307,17 +305,14 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
 
                             </div>
                         </div>
-                        <a className="mr-5 hover:text-black-700 font-semibold text-xl" href='/bathTowels'>Bath Towels</a>
-                        <a className="mr-5 hover:text-black-700 font-semibold text-xl" href='/womenWear/kurti'>Kurtis</a>
+                        <a className="mr-5 hover:text-pink-600 font-semibold text-xl" href='/bathTowels'>Bath Towels</a>
+                        <a className="mr-5 hover:text-pink-600 font-semibold text-xl" href='/womenWear/kurti'>Kurtis</a>
                     </nav>
                     <button onClick={toggleCart} className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-3xl mt-4 md:mt-0 ">< MdAccountCircle/>
                     </button>
                     <button onClick={toggleCart} className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-3xl mt-4 md:mt-0 mx-5 "><AiOutlineShoppingCart />
-                        {/* <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                            <path d="M5 12h14M12 5l7 7-7 7"></path>
-                        </svg> */}
                     </button>
-                    <div ref={ref} className={`w-90 h-[100vh] px-12 sideCart absolute right-0 top-0 bg-pink-200 p-20 transform transition-transform ${Object.keys(cart).length !== 0 ? 'translate-x-0':'translate-x-full'}`}>
+                    <div ref={ref} className={`w-90 h-[100vh] px-12 overflow-y-scroll sideCart absolute right-0 top-0 bg-pink-200 p-20 transform transition-transform ${Object.keys(cart).length !== 0 ? 'translate-x-0':'translate-x-full'}`}>
                         <h2 className='font-bold text-xl text-center'>Shopping Cart</h2>
                         <span onClick={toggleCart} className='absolute top-5 right-3 cursor-pointer text-2xl text-pink-500'><AiFillCloseCircle /></span>
                         <ol className='list-decimal font-semibold'>
@@ -327,7 +322,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                             {Object.keys(cart).map((k) => {
                                 return <li key={k}>
                                     <div className="item flex my-5">
-                                        <div className='w-2/3 font-semibold text-lg'>{cart[k].name}</div>
+                                        <div className='w-2/3 font-semibold text-lg'>{cart[k].name} ({cart[k].variant})</div>
                                         <div className='w-1/3 font-semibold flex items-center justify-center text-xl'><AiFillMinusCircle className='mx-2 text-2xl cursor-pointer text-pink-500' onClick={() => { removeFromCart(k, 1, cart[k].price, cart[k].name, cart[k].variant) }} /> {cart[k].qty} <AiFillPlusCircle onClick={() => { addToCart(k, 1, cart[k].price, cart[k].name, cart[k].variant) }} className='mx-2 text-2xl cursor-pointer text-pink-500' /></div>
                                     </div>
                                 </li>
