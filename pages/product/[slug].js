@@ -31,7 +31,7 @@ const Post = ({ addToCart, product, variants, buyNow }) => {
             });
         } else {
             setservice(false)
-            toast.error('Sorry, Your Pincode is not serviceable :(', {
+            toast.error('Sorry, Pincode is not serviceable :(', {
                 position: "top-right",
                 autoClose: 1000,
                 hideProgressBar: false,
@@ -120,6 +120,7 @@ const Post = ({ addToCart, product, variants, buyNow }) => {
                                     {Object.keys(variants).includes('blue') && <button onClick={() =>{ refreshVaraint('blue') }} className={`border-2 border-gray-300 ml-1 bg-blue-600 rounded-full w-6 h-6 focus:outline-none ${color === 'blue' ? 'border-black' : 'border-gray-300'}`}></button>}
                                     {Object.keys(variants).includes('pink') && <button onClick={() =>{ refreshVaraint('pink') }} className={`border-2 border-gray-300 ml-1 bg-pink-600 rounded-full w-6 h-6 focus:outline-none ${color === 'pink' ? 'border-black' : 'border-gray-300'}`}></button>}
                                     {Object.keys(variants).includes('red') && <button onClick={() =>{ refreshVaraint('red') }} className={`border-2 border-gray-300 ml-1 bg-red-600 rounded-full w-6 h-6 focus:outline-none ${color === 'red' ? 'border-black' : 'border-gray-300'}`}></button>}
+                                    {Object.keys(variants).includes('white') && <button onClick={() =>{ refreshVaraint('white') }} className={`border-2 border-gray-300 ml-1 bg-white rounded-full w-6 h-6 focus:outline-none ${color === 'white' ? 'border-black' : 'border-gray-300'}`}></button>}
                                 </div>
                             </div>
                             <div className="flex">
@@ -160,7 +161,7 @@ export async function getServerSideProps(context) {
     }
 
     let product = await Product.findOne({ slug: context.query.slug })
-    let variants = await Product.find({ title: product.title })
+    let variants = await Product.find({ title: product.title, category: product.category })
 
     let colorSlug = {}   // dumy content { red: {slug: 'upgrade-your-home}}
 

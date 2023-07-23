@@ -11,6 +11,7 @@ const SingleBedSheets = ({ products }) => {
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4 justify-center">
+            {Object.keys(products).length === 0 && <p>Sorry All The Single Bed Sheets are Currently Out Of Stock. New Stock Coming Soon!</p>}
             {Object.keys(products).map((item) => {
               return <Link passHref={true} key={products[item]._id} href={`/product/${products[item].slug}`} className="lg:w-1/4 md:w-1/2 p-4 w-full cursor-pointer shadow-xl m-5">
                 <span className="block relative  rounded overflow-hidden">
@@ -71,7 +72,7 @@ export async function getServerSideProps(context) {
   return {
 
     // Will be passed to the page component as props
-    
+
     props: { products: JSON.parse(JSON.stringify(singleBedSheets)) },
 
   }
