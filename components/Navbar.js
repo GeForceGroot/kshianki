@@ -6,8 +6,8 @@ import { MdAccountCircle } from 'react-icons/md'
 import { AiOutlineShoppingCart, AiFillMinusCircle, AiFillPlusCircle, AiFillCloseCircle } from 'react-icons/ai'
 import { useRef } from 'react'
 import { BsBagHeartFill, BsFillCartXFill } from 'react-icons/bs'
-
-const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
+import { BiLogIn } from 'react-icons/bi'
+const Navbar = ({ logout, user, cart, addToCart, removeFromCart, clearCart, subTotal }) => {
 
     const [isOpen, setIsOpen] = useState(false);
     const [isOpen1, setIsOpen1] = useState(false);
@@ -15,6 +15,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
     const [isNestedOpen, setIsNestedOpen] = useState(false);
     const [isNestedOpen1, setIsNestedOpen1] = useState(false);
     const [isNestedOpen2, setIsNestedOpen2] = useState(false);
+    const [dropdown, setDropdown] = useState(false)
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -51,6 +52,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
         }
     }
 
+
     return (
         <>
             <header className="text-gray-600 body-font shadow-lg mb-1 sticky top-0 bg-white z-10">
@@ -62,7 +64,7 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
                         <span className="ml-3 mt-4 text-2xl">KSHIANKI®</span>
                     </span>
                     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-                        <a className="mr-5 hover:text-pink-600 text-xl font-semibold" href='/'>Home</a>
+                        <Link className="mr-5 hover:text-pink-600 text-xl font-semibold" href={'/'}>Home</Link>
                         <div>
                             <div className="relative inline-block text-left">
                                 <button
@@ -109,60 +111,60 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
 
                                             {isNestedOpen && (
                                                 <div className="pl-6">
-                                                    <a
-                                                        href="/homeFurnishing/singleBedSheets"
+                                                    <Link
+                                                        href={"/homeFurnishing/singleBedSheets"}
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Single Bedsheet
-                                                    </a>
-                                                    <a
-                                                        href="/homeFurnishing/doubleBedSheet"
+                                                    </Link>
+                                                    <Link
+                                                        href={"/homeFurnishing/doubleBedSheet"}
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Double Bedsheet
-                                                    </a>
-                                                    <a
-                                                        href="/homeFurnishing/pureCottonBedSheet"
+                                                    </Link>
+                                                    <Link
+                                                        href={"/homeFurnishing/pureCottonBedSheet"}
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Pure Cotton Bedsheet
-                                                    </a>
-                                                    <a
-                                                        href="/homeFurnishing/kidsSpecialKingSizeBedSheets"
+                                                    </Link>
+                                                    <Link
+                                                        href={"/homeFurnishing/kidsSpecialKingSizeBedSheets"}
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Kid's Special King Size Bedsheet
-                                                    </a>
-                                                    <a
-                                                        href="/homeFurnishing/kingSizeElaticFittedBedSheet"
+                                                    </Link>
+                                                    <Link
+                                                        href={"/homeFurnishing/kingSizeElaticFittedBedSheet"}
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         King Size Elastic/Fitted Bedsheet
-                                                    </a>
-                                                    <a
-                                                        href="/homeFurnishing/superKingSizeBedSheets"
+                                                    </Link>
+                                                    <Link
+                                                        href={"/homeFurnishing/superKingSizeBedSheets"}
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Super King Size Bedsheet
-                                                    </a>
-                                                    <a
-                                                        href="/homeFurnishing/bookFoldingBedSheetSet"
+                                                    </Link>
+                                                    <Link
+                                                        href={"/homeFurnishing/bookFoldingBedSheetSet"}
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Book Folding Bedsheet Set
-                                                    </a>
-                                                    <a
-                                                        href="/homeFurnishing/bedCover"
+                                                    </Link>
+                                                    <Link
+                                                        href={"/homeFurnishing/bedCover"}
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Bed Covers
-                                                    </a>
-                                                    <a
-                                                        href="/homeFurnishing/winterBedSheets"
+                                                    </Link>
+                                                    <Link
+                                                        href={"/homeFurnishing/winterBedSheets"}
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Winter Bedsheets
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             )}
                                         </div>
@@ -188,24 +190,24 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
 
                                             {isNestedOpen1 && (
                                                 <div className="pl-6">
-                                                    <a
-                                                        href="/cushions/cushionFillers"
+                                                    <Link
+                                                        href={"/cushions/cushionFillers"}
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Cushion Fillers
-                                                    </a>
-                                                    <a
-                                                        href="/cushions/cushionCover"
+                                                    </Link>
+                                                    <Link
+                                                        href={"/cushions/cushionCover"}
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Cushion Cover
-                                                    </a>
-                                                    <a
-                                                        href="/cushions/cushionCoversWithFillers"
+                                                    </Link>
+                                                    <Link
+                                                        href={"/cushions/cushionCoversWithFillers"}
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Cushion Covers With Fillers
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             )}
                                         </div>
@@ -231,88 +233,108 @@ const Navbar = ({ cart, addToCart, removeFromCart, clearCart, subTotal }) => {
 
                                             {isNestedOpen2 && (
                                                 <div className="pl-6">
-                                                    <a
-                                                        href="/table/tableRunner"
+                                                    <Link
+                                                        href={"/table/tableRunner"}
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Table Runner
-                                                    </a>
-                                                    <a
-                                                        href="/table/tableCover"
+                                                    </Link>
+                                                    <Link
+                                                        href={"/table/tableCover"}
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Table Cover
-                                                    </a>
-                                                    <a
-                                                        href="/table/tableMats"
+                                                    </Link>
+                                                    <Link
+                                                        href={"/table/tableMats"}
                                                         className="block px-4 py-2 text-m leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                                     >
                                                         Table Mats
-                                                    </a>
+                                                    </Link>
                                                 </div>
                                             )}
                                         </div>
                                         <div className="py-1 rounded-md bg-white shadow-xs">
-                                            <a
+                                            <Link
                                                 href={'/comforter'}
                                                 className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                             >
                                                 Comforter
-                                            </a>
+                                            </Link>
                                         </div>
                                         <div className="py-1 rounded-md bg-white shadow-xs">
-                                            <a
+                                            <Link
                                                 href={'/carpet'}
                                                 className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                             >
                                                 Carpet
-                                            </a>
+                                            </Link>
                                         </div>
                                         <div className="py-1 rounded-md bg-white shadow-xs">
-                                            <a
+                                            <Link
                                                 href={'/diwanSet'}
                                                 className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                             >
                                                 Diwan Set
-                                            </a>
+                                            </Link>
                                         </div>
                                         <div className="py-1 rounded-md bg-white shadow-xs">
-                                            <a
+                                            <Link
                                                 href={'/rugs'}
                                                 className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                             >
                                                 Rugs
-                                            </a>
+                                            </Link>
                                         </div>
                                         <div className="py-1 rounded-md bg-white shadow-xs">
-                                            <a
+                                            <Link
                                                 href={'/blankets'}
                                                 className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                             >
                                                 Blankets
-                                            </a>
+                                            </Link>
                                         </div>
                                         <div className="py-1 rounded-md bg-white shadow-xs">
-                                            <a
+                                            <Link
                                                 href={'/quilt'}
                                                 className="block px-4 py-2 text-lg leading-5 text-gray-700 hover:bg-pink-500 hover:text-white focus:outline-none focus:bg-pink-500 focus:text-white"
                                             >
                                                 Quilt
-                                            </a>
+                                            </Link>
                                         </div>
                                     </div>
                                 )}
 
                             </div>
                         </div>
-                        <a className="mr-5 hover:text-pink-600 font-semibold text-xl" href='/bathTowels'>Bath Towels</a>
-                        <a className="mr-5 hover:text-pink-600 font-semibold text-xl" href='/womenWear/kurti'>Kurtis</a>
+                        <Link className="mr-5 hover:text-pink-600 font-semibold text-xl" href='/bathTowels'>Bath Towels</Link>
+                        <Link className="mr-5 hover:text-pink-600 font-semibold text-xl" href='/womenWear/kurti'>Kurtis</Link>
                     </nav>
-                    <button onClick={toggleCart} className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-3xl mt-4 md:mt-0 ">< MdAccountCircle/>
-                    </button>
+                    {user.value &&<div className="inline-flex items-center bg-gray-100 border-0 py-1 mx-2 px-3 focus:outline-none hover:bg-gray-200 rounded text-3xl mt-4 md:mt-0 ">
+                        <div onMouseOver={() => { setDropdown(true) }} onMouseLeave={() => { setDropdown(false) }}>
+                            {dropdown && <div onMouseOver={() => { setDropdown(true) }} onMouseLeave={() => { setDropdown(false) }} className='absolute right-80 bg-white shadow-xl border border-pink-300 top-24 rounded-md py-6 px-8 w-40'>
+                                <ul>
+                                    <Link href={'/myaccount'}>
+                                    <li className='py-1 text-sm hover:text-pink-700 font-bold'>My Account</li>
+                                    </Link>
+                                    <hr className='font-bold' />
+                                    <Link href={'/orders'}>
+                                    <li className='py-1 text-sm hover:text-pink-700 font-bold'>Orders</li>
+                                    </Link>
+                                    <hr />
+                                    <li onClick={logout} className='py-1 text-sm hover:text-pink-700 font-bold cursor-pointer'>Logout</li>
+                                </ul>
+                            </div>}
+                             <MdAccountCircle />
+                        </div>
+                    </div> }
+                    {!user.value && <Link href={'/login'}>
+                        <button className='inline-flex items-center bg-gray-100 border-0 py-1 mx-2 px-3 focus:outline-none hover:bg-gray-200 rounded text-3xl mt-4 md:mt-0 '><BiLogIn /></button>
+                    </Link>}
                     <button onClick={toggleCart} className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-3xl mt-4 md:mt-0 mx-5 "><AiOutlineShoppingCart />
                     </button>
-                    <div ref={ref} className={`w-90 h-[100vh] px-12 overflow-y-scroll sideCart absolute right-0 top-0 bg-pink-200 p-20 transform transition-transform ${Object.keys(cart).length !== 0 ? 'translate-x-0':'translate-x-full'}`}>
+
+                    <div ref={ref} className={`w-90 h-[100vh] px-12 overflow-y-scroll sideCart absolute right-0 top-0 bg-pink-200 p-20 transform transition-transform ${Object.keys(cart).length !== 0 ? 'translate-x-0' : 'translate-x-full'}`}>
                         <h2 className='font-bold text-xl text-center'>Shopping Cart</h2>
                         <span onClick={toggleCart} className='absolute top-5 right-3 cursor-pointer text-2xl text-pink-500'><AiFillCloseCircle /></span>
                         <ol className='list-decimal font-semibold'>

@@ -121,6 +121,7 @@ const Post = ({ addToCart, product, variants, buyNow }) => {
                                     {Object.keys(variants).includes('pink') && <button onClick={() =>{ refreshVaraint('pink') }} className={`border-2 border-gray-300 ml-1 bg-pink-600 rounded-full w-6 h-6 focus:outline-none ${color === 'pink' ? 'border-black' : 'border-gray-300'}`}></button>}
                                     {Object.keys(variants).includes('red') && <button onClick={() =>{ refreshVaraint('red') }} className={`border-2 border-gray-300 ml-1 bg-red-600 rounded-full w-6 h-6 focus:outline-none ${color === 'red' ? 'border-black' : 'border-gray-300'}`}></button>}
                                     {Object.keys(variants).includes('white') && <button onClick={() =>{ refreshVaraint('white') }} className={`border-2 border-gray-300 ml-1 bg-white rounded-full w-6 h-6 focus:outline-none ${color === 'white' ? 'border-black' : 'border-gray-300'}`}></button>}
+                                    {Object.keys(variants).includes('gray') && <button onClick={() =>{ refreshVaraint('gray') }} className={`border-2 border-gray-300 ml-1 bg-gray-600 rounded-full w-6 h-6 focus:outline-none ${color === 'gray' ? 'border-black' : 'border-gray-300'}`}></button>}
                                 </div>
                             </div>
                             <div className="flex">
